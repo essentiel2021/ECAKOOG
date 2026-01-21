@@ -11,6 +11,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
             }
+            // Close mobile menu if open
+            const navMenu = document.querySelector('.nav-menu');
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
         });
     });
+
+    // Mobile Menu Toggle
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
 });
