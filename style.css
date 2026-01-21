@@ -35,7 +35,7 @@ body {
 
 /* TOP BAR */
 .top-bar {
-    background-color: var(--agrica-green);
+    background-color: #1a3324;
     color: var(--agrica-white);
     font-size: 14px;
     padding: 10px 0;
