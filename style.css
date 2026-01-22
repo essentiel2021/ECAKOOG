@@ -60,7 +60,7 @@ h6 {
 
 .main-content p {
     font-size: 18px;
-    color: var(--agrica-text);
+    color: red;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
