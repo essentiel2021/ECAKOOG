@@ -43,6 +43,29 @@ h6 {
     padding: 0 15px;
 }
 
+.main-content {
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--agrica-white);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.main-content h2 {
+    font-size: 48px;
+    color: var(--agrica-dark);
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 18px;
+    color: var(--agrica-text);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
 /* TOP BAR */
 .top-bar {
     background-color: #1a3324;
