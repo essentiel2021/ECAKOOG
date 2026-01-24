@@ -59,6 +59,73 @@
         </nav>
     </header>
 
+    <section class="hero-slider">
+        <div class="slider-container">
+            <!-- Slide 1 -->
+            <div class="slide active"
+                style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/service_collecte_achat.png');">
+                <div class="container">
+                    <div class="slide-content">
+                        <span class="slide-subtitle">EXCELLENCE AGRICOLE</span>
+                        <h1 class="slide-title">Cultiver l'Excellence pour un Cacao Durable</h1>
+                        <p class="slide-desc">Nous accompagnons nos producteurs vers une agriculture moderne,
+                            respectueuse de l'environnement et de la qualité.</p>
+                        <div class="slide-actions">
+                            <a href="#" class="btn-slider">DÉCOUVRIR NOS ACTIONS</a>
+                            <a href="#" class="btn-slider btn-outline">NOS SERVICES</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/engagement_worker.png');">
+                <div class="container">
+                    <div class="slide-content">
+                        <span class="slide-subtitle">ENGAGEMENT SOCIAL</span>
+                        <h2 class="slide-title">Au Cœur du Développement des Communautés</h2>
+                        <p class="slide-desc">Plus de 3318 producteurs engagés pour une transformation sociale et
+                            économique durable en milieu rural.</p>
+                        <div class="slide-actions">
+                            <a href="#" class="btn-slider">REJOINDRE LA COOPÉRATIVE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/service_climat.png');">
+                <div class="container">
+                    <div class="slide-content">
+                        <span class="slide-subtitle">INNOVATION DURABLE</span>
+                        <h2 class="slide-title">Lutter pour la Préservation de Notre Climat</h2>
+                        <p class="slide-desc">Mise en œuvre d'actions concrètes de reforestation pour garantir l'avenir
+                            de la cacaoculture ivoirienne.</p>
+                        <div class="slide-actions">
+                            <a href="#" class="btn-slider">NOS RÉALISATIONS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Navigation -->
+        <div class="slider-nav">
+            <button class="nav-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="nav-next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="slider-pagination">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </section>
+
+
     <section class="about-section">
         <div class="container">
             <div class="about-grid">
@@ -457,6 +524,83 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- Custom Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Slider Logic
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.nav-prev');
+            const nextBtn = document.querySelector('.nav-next');
+            let currentSlide = 0;
+            let slideInterval;
+
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                if (index >= slides.length) currentSlide = 0;
+                else if (index < 0) currentSlide = slides.length - 1;
+                else currentSlide = index;
+
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+
+            function prevSlide() {
+                showSlide(currentSlide - 1);
+            }
+
+            // Event Listeners
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetTimer();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetTimer();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                    resetTimer();
+                });
+            });
+
+            function startTimer() {
+                slideInterval = setInterval(nextSlide, 7000);
+            }
+
+            function resetTimer() {
+                clearInterval(slideInterval);
+                startTimer();
+            }
+
+            startTimer();
+
+            // Mobile Menu Toggle
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            menuToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+                const i = this.querySelector('i');
+                if (navMenu.classList.contains('active')) {
+                    i.classList.remove('fa-bars');
+                    i.classList.add('fa-xmark');
+                } else {
+                    i.classList.remove('fa-xmark');
+                    i.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
