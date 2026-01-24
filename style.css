@@ -507,41 +507,61 @@ h6 {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .engagement-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-
-    .engagement-visual {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .section-header.align-left {
-        align-items: center;
-        text-align: center;
-    }
-
-    .engagement-list li {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .engagement-section {
-        padding: 60px 0;
+        gap: 40px;
     }
 
     .engagement-list p {
         font-size: 16px;
     }
+}
 
-    .floating-badge {
-        width: 150px;
-        height: 150px;
-        bottom: -20px;
-        left: -10px;
+@media (max-width: 992px) {
+    .engagement-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .engagement-visual {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .engagement-visual .image-wrapper {
+        padding-right: 0;
+    }
+
+    .engagement-list li {
+        justify-content: flex-start;
+        /* Keep left aligned even on tablets if text is long */
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .engagement-section {
+        padding: 80px 0;
+    }
+
+    .engagement-list p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .engagement-section {
+        padding: 60px 0;
+    }
+
+    .engagement-list li {
+        margin-bottom: 20px;
+    }
+
+    .engagement-list i {
+        font-size: 18px;
     }
 }
 
