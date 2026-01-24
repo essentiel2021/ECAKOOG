@@ -650,19 +650,43 @@ h6 {
     line-height: 1.3;
 }
 
+@media (max-width: 1200px) {
+    .realisations-grid {
+        gap: 20px;
+    }
+
+    .realisation-name {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 992px) {
     .realisations-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .realisation-name {
+        font-size: 20px;
     }
 }
 
 @media (max-width: 600px) {
     .realisations-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .realisations-section {
         padding: 60px 0;
+    }
+
+    .realisation-name {
+        font-size: 19px;
+    }
+
+    .realisation-image {
+        margin-bottom: 15px;
     }
 }
 
