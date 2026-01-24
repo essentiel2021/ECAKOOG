@@ -263,6 +263,160 @@ h6 {
     transform: rotate(15deg) scale(1.2);
 }
 
+/* SERVICES SECTION */
+.services-section {
+    padding: 100px 0;
+    background-color: var(--agrica-white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 0;
+}
+
+.service-card {
+    position: relative;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    color: var(--agrica-white);
+    overflow: hidden;
+}
+
+.service-card .service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 34, 17, 0.6);
+    transition: background 0.3s ease;
+}
+
+/* Service-specific hover colors */
+.service-collecter:hover .service-overlay {
+    background: rgba(0, 161, 58, 0.8);
+    /* Green */
+}
+
+.service-approvisionner:hover .service-overlay {
+    background: rgba(144, 76, 21, 0.8);
+    /* Gold */
+}
+
+.service-accompagner:hover .service-overlay {
+    background: rgba(211, 156, 10, 0.8);
+    /* Or */
+}
+
+.service-content {
+    position: relative;
+    z-index: 2;
+}
+
+.service-desc {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.service-title {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.btn-service {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid var(--agrica-white);
+    border-radius: 50px;
+    color: var(--agrica-white);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Button hover color matches the parent card hover color */
+.service-collecter:hover .btn-service {
+    background-color: var(--agrica-white);
+    color: var(--agrica-green);
+}
+
+.service-approvisionner:hover .btn-service {
+    background-color: var(--agrica-white);
+    color: var(--agrica-gold);
+}
+
+.service-accompagner:hover .btn-service {
+    background-color: var(--agrica-white);
+    color: var(--agrica-or);
+}
+
+@media (max-width: 1200px) {
+    .service-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        /* Add horizontal gap on tablets for better legibility */
+    }
+
+    .service-card {
+        min-height: 450px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        min-height: 400px;
+        padding: 40px 20px;
+    }
+
+    .service-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        min-height: 350px;
+    }
+
+    .service-title {
+        font-size: 18px;
+    }
+
+    .service-desc {
+        font-size: 14px;
+    }
+}
+
 /* BLOG SECTION - EXACT REPRODUCTION */
 .blog-section {
     padding: 80px 0;
