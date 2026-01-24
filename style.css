@@ -565,6 +565,107 @@ h6 {
     }
 }
 
+/* RÉALISATIONS SECTION */
+.realisations-section {
+    padding: 100px 0;
+    background-color: var(--agrica-light-bg);
+}
+
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.realisation-card {
+    background: transparent;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.realisation-card:hover {
+    transform: translateY(-10px);
+}
+
+.realisation-image {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    aspect-ratio: 1 / 1;
+}
+
+.realisation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.realisation-card:hover .realisation-image img {
+    transform: scale(1.1);
+}
+
+.realisation-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--agrica-or);
+    color: var(--agrica-dark);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.realisation-accent:hover {
+    background-color: var(--agrica-green);
+    color: var(--agrica-white);
+}
+
+.realisation-category {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    color: #888;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.realisation-name {
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--agrica-dark);
+    margin: 0;
+    text-align: center;
+    line-height: 1.3;
+}
+
+@media (max-width: 992px) {
+    .realisations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .realisations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .realisations-section {
+        padding: 60px 0;
+    }
+}
+
 /* BLOG SECTION - EXACT REPRODUCTION */
 .blog-section {
     padding: 80px 0;
