@@ -36,4 +36,57 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Dropdown Click Logic
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle > a');
+    dropdownToggles.forEach(toggleLink => {
+        toggleLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const parent = this.parentElement;
+            const wasActive = parent.classList.contains('active');
+
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown-toggle').forEach(dt => {
+                if (dt !== parent) dt.classList.remove('active');
+            });
+
+            // Toggle current
+            if (!wasActive) {
+                parent.classList.add('active');
+            } else {
+                parent.classList.remove('active');
+            }
+        });
+    });
+
+    // Social Share Popup Logic
+    const shareBtns = document.querySelectorAll('.realisation-accent');
+    shareBtns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            shareBtns.forEach(otherBtn => {
+                if (otherBtn !== this) otherBtn.classList.remove('active');
+            });
+            this.classList.toggle('active');
+        });
+    });
+
+    // Combined Outside Click Handler
+    document.addEventListener('click', (e) => {
+        // Close social popups
+        shareBtns.forEach(btn => btn.classList.remove('active'));
+
+        // Close dropdowns
+        if (!e.target.closest('.dropdown-toggle')) {
+            document.querySelectorAll('.dropdown-toggle').forEach(dt => dt.classList.remove('active'));
+        }
+    });
+
+    // Prevent closing when clicking inside popup
+    document.querySelectorAll('.social-popup').forEach(popup => {
+        popup.addEventListener('click', (e) => e.stopPropagation());
+    });
 });
