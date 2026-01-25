@@ -540,12 +540,12 @@ h6 {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px 0;
+    /* gap: 20px 0; */
 }
 
 .service-card {
     position: relative;
-    min-height: 500px;
+    min-height: auto;
     background-size: cover;
     background-position: center;
     display: flex;
