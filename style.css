@@ -1093,6 +1093,32 @@ h6 {
     }
 }
 
+.realisations-footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-agrica {
+    display: inline-block;
+    padding: 16px 45px;
+    background-color: var(--agrica-green);
+    color: var(--agrica-white);
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--agrica-green);
+}
+
+.btn-agrica:hover {
+    background-color: transparent;
+    color: var(--agrica-green);
+    transform: translateY(-5px);
+}
+
 /* BLOG SECTION - EXACT REPRODUCTION */
 .blog-section {
     padding: 80px 0;
