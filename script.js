@@ -20,6 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (revealElements.length > 0) {
         revealElements.forEach(el => revealObserver.observe(el));
+
+        // Fail-safe: Show all after 3 seconds if not already active
+        setTimeout(() => {
+            revealElements.forEach(el => {
+                if (!el.classList.contains('active')) {
+                    console.log('Fail-safe activation');
+                    el.classList.add('active');
+                    revealObserver.unobserve(el);
+                }
+            });
+        }, 3000);
     } else {
         console.warn('No reveal elements found in DOM');
     }
