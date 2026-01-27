@@ -1093,9 +1093,15 @@ h6 {
     }
 }
 
-.section-footer {
+.section-footer,
+.section-top-actions {
     text-align: center;
     margin-top: 50px;
+}
+
+.section-top-actions {
+    margin-top: -20px;
+    margin-bottom: 40px;
 }
 
 .btn-agrica {
