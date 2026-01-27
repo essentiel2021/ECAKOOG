@@ -649,12 +649,12 @@ h6 {
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* gap: 20px 0; */
+    gap: 2px;
 }
 
 .service-card {
     position: relative;
-    min-height: auto;
+    min-height: 480px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -665,6 +665,12 @@ h6 {
     padding: 40px;
     color: var(--agrica-white);
     overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .service-card .service-overlay {
