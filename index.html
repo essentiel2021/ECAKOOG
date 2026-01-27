@@ -5,7 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECAKOOG - Entreprise Coopérative Agricole Koognanan De Grogouya</title>
-    <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="stylesheet" href="style.css?v=1.3">
+    <style>
+        /* Force reveal animations inline to bypass cache */
+        @keyframes revealSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes revealSlideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes revealSlideRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .reveal,
+        .reveal-left,
+        .reveal-right {
+            opacity: 0;
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            animation: revealSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+        }
+
+        .reveal-left.active {
+            animation: revealSlideLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+        }
+
+        .reveal-right.active {
+            animation: revealSlideRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+        }
+    </style>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -288,6 +345,8 @@
                             <p>Tous nos produits sont 100% traçables, assurant transparence et confiance.</p>
                         </li>
                     </ul>
+                    <!-- Versoin Marker for Debugging -->
+                    <span style="font-size: 10px; color: #ccc; opacity: 0.5;">v1.3</span>
                 </div>
                 <div class="engagement-visual reveal-right">
                     <div class="image-wrapper">
@@ -544,7 +603,7 @@
         </div>
     </footer>
 
-    <script src="script.js?v=1.2"></script>
+    <script src="script.js?v=1.3"></script>
     <!-- Custom Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
