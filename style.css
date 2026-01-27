@@ -1127,14 +1127,16 @@ h6 {
 
 /* Featured Post Styling */
 .featured-post {
-    padding: 40px;
+    padding: 40px 40px 10px 40px;
     background-size: cover;
     background-position: center;
     min-height: 450px;
     color: var(--agrica-white);
     border-radius: 0;
     /* Flat style as in image */
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
     overflow: hidden;
 }
