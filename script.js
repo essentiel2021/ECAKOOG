@@ -89,7 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            console.log('Entry:', entry.target.className, 'isIntersecting:', entry.isIntersecting);
             if (entry.isIntersecting) {
+                console.log('Activating:', entry.target.className);
                 entry.target.classList.add('active');
                 revealObserver.unobserve(entry.target);
             }
