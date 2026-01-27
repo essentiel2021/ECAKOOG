@@ -1,19 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Agrica Header Loaded');
+    console.log('Agrica JS Initialized');
+
+    // Scroll Reveal Logic
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    console.log('Reveal elements found:', revealElements.length);
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log('Activating element:', entry.target.tagName, entry.target.className);
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    if (revealElements.length > 0) {
+        revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+        console.warn('No reveal elements found in DOM');
+    }
 
     // Smooth scrolling for any links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
+            const href = this.getAttribute('href');
+            if (href === '#' || !href.startsWith('#')) return;
+
+            try {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            } catch (err) {
+                console.error('Invalid selector:', href);
             }
+
             // Close mobile menu if open
             const navMenu = document.querySelector('.nav-menu');
-            if (navMenu.classList.contains('active')) {
+            if (navMenu && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
             }
         });
@@ -27,24 +55,27 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             const icon = mobileToggle.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
+            if (icon) {
+                if (navMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
     }
 
     // Dropdown Click Logic
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle > a');
-    dropdownToggles.forEach(toggleLink => {
+    document.querySelectorAll('.dropdown-toggle > a').forEach(toggleLink => {
         toggleLink.addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
 
             const parent = this.parentElement;
+            if (!parent) return;
+
             const wasActive = parent.classList.contains('active');
 
             // Close all other dropdowns
@@ -52,12 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (dt !== parent) dt.classList.remove('active');
             });
 
-            // Toggle current
-            if (!wasActive) {
-                parent.classList.add('active');
-            } else {
-                parent.classList.remove('active');
-            }
+            parent.classList.toggle('active', !wasActive);
         });
     });
 
@@ -74,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Combined Outside Click Handler
+    // Global Click Handler
     document.addEventListener('click', (e) => {
         // Close social popups
         shareBtns.forEach(btn => btn.classList.remove('active'));
@@ -84,21 +110,4 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.dropdown-toggle').forEach(dt => dt.classList.remove('active'));
         }
     });
-
-    // Scroll Reveal Logic
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            console.log('Entry:', entry.target.className, 'isIntersecting:', entry.isIntersecting);
-            if (entry.isIntersecting) {
-                console.log('Activating:', entry.target.className);
-                entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
 });
