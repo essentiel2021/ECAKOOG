@@ -85,8 +85,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Prevent closing when clicking inside popup
-    document.querySelectorAll('.social-popup').forEach(popup => {
-        popup.addEventListener('click', (e) => e.stopPropagation());
+    // Scroll Reveal Logic
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
     });
+
+    revealElements.forEach(el => revealObserver.observe(el));
 });
