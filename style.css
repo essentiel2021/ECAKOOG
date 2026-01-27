@@ -1167,8 +1167,8 @@ h6 {
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin-top: 150px;
-    /* Initial margin for the user to adjust */
+    margin-top: 220px;
+    /* Margin adjusted to move content lower */
 }
 
 .featured-post .post-title {
