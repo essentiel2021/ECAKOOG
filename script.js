@@ -7,14 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
                 console.log('Activating element:', entry.target.tagName, entry.target.className);
                 entry.target.classList.add('active');
                 revealObserver.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.15
+        threshold: 0.01,
+        rootMargin: '0px 0px -50px 0px'
     });
 
     if (revealElements.length > 0) {
