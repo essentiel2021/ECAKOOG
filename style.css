@@ -846,14 +846,13 @@ h6 {
 
 .engagement-visual .image-wrapper {
     position: relative;
-    padding-right: 50px;
+    padding-right: 0;
 }
 
 .engagement-visual .main-image {
     width: 100%;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    /* Organic rounded shape */
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .floating-badge {
