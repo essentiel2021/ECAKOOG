@@ -1045,7 +1045,7 @@ h6 {
 
 .realisation-name {
     font-family: 'Merriweather', serif;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 800;
     color: var(--agrica-dark);
     margin: 0;
@@ -1059,7 +1059,7 @@ h6 {
     }
 
     .realisation-name {
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 
@@ -1070,7 +1070,7 @@ h6 {
     }
 
     .realisation-name {
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
@@ -1806,23 +1806,4 @@ h6 {
 
 .engagement-content.active .engagement-list li:nth-child(3) i {
     animation-delay: 1.0s;
-}
-
-.reveal-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 0.8s ease-out;
-}
-
-.reveal-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: all 0.8s ease-out;
-}
-
-.reveal.active,
-.reveal-left.active,
-.reveal-right.active {
-    opacity: 1 !important;
-    transform: translate(0, 0) !important;
 }
