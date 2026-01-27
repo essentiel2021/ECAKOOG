@@ -1136,7 +1136,8 @@ h6 {
     /* Flat style as in image */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Switch to top alignment */
     position: relative;
     overflow: hidden;
 }
@@ -1166,7 +1167,8 @@ h6 {
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: flex-end;
+    margin-top: 150px;
+    /* Initial margin for the user to adjust */
 }
 
 .featured-post .post-title {
