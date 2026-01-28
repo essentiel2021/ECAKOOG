@@ -654,7 +654,7 @@ h6 {
 
 .service-card {
     position: relative;
-    min-height: 480px;
+    min-height: 388px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -765,7 +765,7 @@ h6 {
     }
 
     .service-card {
-        min-height: 450px;
+        min-height: 350px;
         padding: 30px;
     }
 }
@@ -777,7 +777,7 @@ h6 {
     }
 
     .service-card {
-        min-height: 400px;
+        min-height: 450px;
         padding: 40px 20px;
     }
 
@@ -788,7 +788,7 @@ h6 {
 
 @media (max-width: 480px) {
     .service-card {
-        min-height: 350px;
+        min-height: 300px;
     }
 
     .service-title {
