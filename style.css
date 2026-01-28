@@ -1422,11 +1422,33 @@ h6 {
     font-weight: 900;
 }
 
-.partners-grid {
+/* Partners Slider Animation */
+.partners-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+.partners-track {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    width: max-content;
+    gap: 40px;
+    animation: scroll 30s linear infinite;
+}
+
+.partners-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 20px));
+    }
 }
 
 .partner-card {
