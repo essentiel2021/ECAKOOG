@@ -112,6 +112,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Services Carousel Navigation
+    const servicesTrack = document.querySelector('.services-track');
+    const prevBtn = document.querySelector('.services-prev');
+    const nextBtn = document.querySelector('.services-next');
+
+    if (servicesTrack && prevBtn && nextBtn) {
+        const getScrollAmount = () => {
+            const card = servicesTrack.querySelector('.service-card');
+            if (!card) return 300;
+            const gap = 24;
+            return card.offsetWidth + gap;
+        };
+
+        prevBtn.addEventListener('click', () => {
+            servicesTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            servicesTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+        });
+    }
+
     // Global Click Handler
     document.addEventListener('click', (e) => {
         // Close social popups

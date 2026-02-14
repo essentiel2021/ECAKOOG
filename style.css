@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
@@ -573,7 +573,7 @@ h6 {
     font-size: 16px;
     line-height: 1.8;
     color: var(--agrica-text);
-    margin-bottom: 30px;
+    margin-bottom: 7px;
 }
 
 .about-features {
@@ -646,31 +646,50 @@ h6 {
     background-color: var(--agrica-white);
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
+.services-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.services-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 10px;
+}
+
+.services-track::-webkit-scrollbar {
+    display: none;
 }
 
 .service-card {
     position: relative;
-    min-height: 388px;
+    width: calc((100% - 72px) / 4);
+    min-width: calc((100% - 72px) / 4);
+    height: 380px;
+    flex-shrink: 0;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    padding: 30px;
     color: var(--agrica-white);
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+                box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .service-card .service-overlay {
@@ -679,24 +698,13 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(31, 34, 17, 0.6);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 45%, rgba(0, 0, 0, 0) 70%);
     transition: background 0.3s ease;
+    border-radius: 16px;
 }
 
-/* Service-specific hover colors */
-.service-collecter:hover .service-overlay {
-    background: rgba(0, 161, 58, 0.8);
-    /* Green */
-}
-
-.service-approvisionner:hover .service-overlay {
-    background: rgba(144, 76, 21, 0.8);
-    /* Gold */
-}
-
-.service-accompagner:hover .service-overlay {
-    background: rgba(211, 156, 10, 0.8);
-    /* Or */
+.service-card:hover .service-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.45) 45%, rgba(0, 0, 0, 0) 70%);
 }
 
 .service-content {
@@ -704,101 +712,67 @@ h6 {
     z-index: 2;
 }
 
-.service-desc {
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 55px;
-    max-width: 300px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-p.service-desc {
-    letter-spacing: 1.5px;
-    line-height: 1.3;
-    font-weight: 400;
-    font-size: 13px;
-}
-
-a.btn-service {
-    font-size: 11px;
-}
-
 .service-title {
     font-family: 'Merriweather', serif;
-    font-size: 20px;
-    line-height: 1.3;
-    font-weight: 900;
-    letter-spacing: 1px;
-    margin-bottom: 46px;
-    text-transform: uppercase;
-    min-height: 3.9em;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0;
+    text-transform: none;
 }
 
-.btn-service {
-    display: inline-block;
-    padding: 8px 20px;
-    border: 2px solid var(--agrica-white);
-    border-radius: 50px;
-    color: var(--agrica-white);
-    text-decoration: none;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
+.services-nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.services-nav-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--agrica-green);
+    background: transparent;
+    color: var(--agrica-green);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
 
-/* Button hover color matches the parent card hover color */
-.service-collecter:hover .btn-service {
-    background-color: var(--agrica-white);
-    color: var(--agrica-green);
-}
-
-.service-approvisionner:hover .btn-service {
-    background-color: var(--agrica-white);
-    color: var(--agrica-gold);
-}
-
-.service-accompagner:hover .btn-service {
-    background-color: var(--agrica-white);
-    color: var(--agrica-or);
+.services-nav-btn:hover {
+    background: var(--agrica-green);
+    color: var(--agrica-white);
 }
 
 @media (max-width: 1200px) {
+    .service-card {
+        width: calc((100% - 72px) / 4);
+        min-width: calc((100% - 72px) / 4);
+        height: 350px;
+    }
+
     .service-title {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 992px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        /* Add horizontal gap on tablets for better legibility */
-    }
-
     .service-card {
-        min-height: 350px;
-        padding: 30px;
+        width: calc(50% - 12px);
+        min-width: calc(50% - 12px);
     }
 }
 
 @media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
     .service-card {
-        min-height: 450px;
-        padding: 40px 20px;
+        min-width: 85%;
+        height: 320px;
+        padding: 25px;
     }
 
     .service-title {
@@ -808,15 +782,11 @@ a.btn-service {
 
 @media (max-width: 480px) {
     .service-card {
-        min-height: 300px;
+        height: 280px;
     }
 
     .service-title {
         font-size: 16px;
-    }
-
-    .service-desc {
-        font-size: 14px;
     }
 }
 
@@ -1013,7 +983,7 @@ a.btn-service {
 
 .realisation-image {
     position: relative;
-    border-radius: 4px;
+    border-radius: 16px;
     overflow: hidden;
     margin-bottom: 25px;
     aspect-ratio: 1 / 1;
