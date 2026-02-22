@@ -1,0 +1,136 @@
+/* Actualites Page Specific Styles */
+
+.actualites-header {
+    background-color: var(--agrica-green);
+    padding: 60px 0;
+    color: white;
+}
+
+.actualites-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.actualites-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+.actualites-section {
+    padding: 60px 0;
+    background-color: var(--agrica-light-bg);
+}
+
+.actualites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.actualites-card {
+    background: transparent;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.actualites-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.actualites-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.actualites-card:hover .actualites-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.actualites-date-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.actualites-date-day {
+    background-color: var(--agrica-or);
+    color: var(--agrica-dark);
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.actualites-date-month {
+    background-color: var(--agrica-green);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.actualites-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--agrica-dark);
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    font-weight: 700;
+    color: var(--agrica-dark);
+}
+
+.page-num {
+    font-size: 1.1rem;
+}
+
+.page-nav {
+    color: var(--agrica-text);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+.page-nav:hover {
+    color: var(--agrica-green);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .actualites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .actualites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .actualites-header {
+        padding: 40px 0;
+    }
+}
