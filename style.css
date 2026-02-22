@@ -1558,6 +1558,13 @@ h6 {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.footer-post:hover {
+    opacity: 0.8;
 }
 
 .footer-post img {
