@@ -35,6 +35,8 @@
     border-radius: 0;
     overflow: hidden;
     position: relative;
+    display: block;
+    text-decoration: none;
 }
 
 .actualites-image-wrapper {
