@@ -1,0 +1,24 @@
+/* Promotion du Genre & Lutte Contre le Travail des Enfants Page Specific Styles */
+
+.service-content-img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.programs-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--agrica-green);
+}
+
+.testimonial-text {
+    font-style: italic;
+}
