@@ -6,63 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECAKOOG - Entreprise Coopérative Agricole Koognanan De Grogouya</title>
     <link rel="stylesheet" href="style.css?v=1.5">
-    <style>
-        /* Force reveal animations inline to bypass cache */
-        @keyframes revealSlideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes revealSlideLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes revealSlideRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .reveal,
-        .reveal-left,
-        .reveal-right {
-            opacity: 0;
-            will-change: opacity, transform;
-        }
-
-        .reveal.active {
-            animation: revealSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
-        }
-
-        .reveal-left.active {
-            animation: revealSlideLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
-        }
-
-        .reveal-right.active {
-            animation: revealSlideRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
-        }
-    </style>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -152,8 +95,7 @@
         <section class="hero-slider">
             <div class="slider-container">
                 <!-- Slide 1 -->
-                <div class="slide active"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/Slide2.webp');">
+                <div class="slide active slide-bg-1">
                     <div class="container">
                         <div class="slide-content">
                             <span class="slide-subtitle">LOGISTIQUE & TRAÇABILITÉ</span>
@@ -168,8 +110,7 @@
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="slide"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/Slide1.webp');">
+                <div class="slide slide-bg-2">
                     <div class="container">
                         <div class="slide-content">
                             <span class="slide-subtitle">SAVOIR-FAIRE AGRICOLE</span>
@@ -186,8 +127,7 @@
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="slide"
-                    style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/Slide3.webp');">
+                <div class="slide slide-bg-3">
                     <div class="container">
                         <div class="slide-content">
                             <span class="slide-subtitle">AUTONOMISATION & IMPACT</span>
@@ -261,14 +201,13 @@
                     <!-- 1. Text Card -->
                     <div class="mosaic-card text-card">
                         <h2>KOGNANAN CACAO</h2>
-                        <p style="font-size: 16px;">"Une norme interne pour produire un cacao durable et traçable"</p>
+                        <p class="kognanan-norm-text">"Une norme interne pour produire un cacao durable et traçable"</p>
                         <a href="#" class="mosaic-link">Découvrez nos 5 piliers <i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
 
                     <!-- 2. Intrants -->
-                    <div class="mosaic-card image-card"
-                        style="background-image: url('services2/Productiondintrantsbiologiques.jpg');">
+                    <div class="mosaic-card image-card service-bg-intrants">
                         <div class="mosaic-card-content">
                             <h3>Production d'intrants biologiques</h3>
                             <div class="card-footer">
@@ -279,8 +218,7 @@
                     </div>
 
                     <!-- 3. Fine Saveur -->
-                    <div class="mosaic-card image-card"
-                        style="background-image: url('services2/Productiondecacaofinesaveur.jpg');">
+                    <div class="mosaic-card image-card service-bg-fine-saveur">
                         <div class="mosaic-card-content">
                             <h3>Production de cacao fine saveur</h3>
                             <div class="card-footer">
@@ -290,7 +228,7 @@
                     </div>
 
                     <!-- 4. Bancarisation -->
-                    <div class="mosaic-card image-card" style="background-image: url('services2/bancarisation.jpg');">
+                    <div class="mosaic-card image-card service-bg-bancarisation">
                         <div class="mosaic-card-content">
                             <h3>Bancarisation & assurance maladie</h3>
                             <div class="card-footer">
@@ -301,8 +239,7 @@
                     </div>
 
                     <!-- 5. Genre -->
-                    <div class="mosaic-card image-card"
-                        style="background-image: url('services2/Promotiondugenre.jpg');">
+                    <div class="mosaic-card image-card service-bg-genre">
                         <div class="mosaic-card-content">
                             <h3>Promotion du genre & lutte contre le travail des enfants</h3>
                             <div class="card-footer">
@@ -312,7 +249,7 @@
                     </div>
 
                     <!-- 6. Agroforesterie -->
-                    <div class="mosaic-card image-card" style="background-image: url('services2/Agroforesterie.jpg');">
+                    <div class="mosaic-card image-card service-bg-agroforesterie">
                         <div class="mosaic-card-content">
                             <h3>Agroforesterie</h3>
                             <div class="card-footer">
@@ -455,7 +392,7 @@
                         </div>
                         <div class="post-content">
                             <div class="post-meta">
-                                News <i class="fa-solid fa-circle" style="font-size: 5px;"></i> 2 Commentaires
+                                News <i class="fa-solid fa-circle post-meta-dot"></i> 2 Commentaires
                             </div>
                             <h3 class="post-title">Opéra Capital en visite chez ECAKOOG</h3>
                             <a href="#" class="continue-reading">CONTINUER LA LECTURE <i
@@ -473,7 +410,7 @@
                         </div>
                         <div class="post-content">
                             <div class="post-meta">
-                                News <i class="fa-solid fa-circle" style="font-size: 5px;"></i> 2 Commentaires
+                                News <i class="fa-solid fa-circle post-meta-dot"></i> 2 Commentaires
                             </div>
                             <h3 class="post-title">Ecakoog au salon mondial du chocolat à Paris</h3>
                             <a href="#" class="continue-reading">CONTINUER LA LECTURE <i
@@ -704,20 +641,7 @@
                 startTimer();
 
                 // Mobile Menu Toggle
-                const menuToggle = document.querySelector('.mobile-menu-toggle');
-                const navMenu = document.querySelector('.nav-menu');
 
-                menuToggle.addEventListener('click', function () {
-                    navMenu.classList.toggle('active');
-                    const i = this.querySelector('i');
-                    if (navMenu.classList.contains('active')) {
-                        i.classList.remove('fa-bars');
-                        i.classList.add('fa-xmark');
-                    } else {
-                        i.classList.remove('fa-xmark');
-                        i.classList.add('fa-bars');
-                    }
-                });
 
                 // Scroll Reveal Logic (Duplicated inline for reliability)
                 const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');

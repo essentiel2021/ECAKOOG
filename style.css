@@ -2713,3 +2713,93 @@ h6 {
         font-size: 28px;
     }
 }
+
+/* Force reveal animations inline to bypass cache */
+@keyframes revealSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes revealSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.reveal,
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    animation: revealSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+.reveal-left.active {
+    animation: revealSlideLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+.reveal-right.active {
+    animation: revealSlideRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+}
+
+.slide-bg-1 {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/Slide2.webp');
+}
+.slide-bg-2 {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/Slide1.webp');
+}
+.slide-bg-3 {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/Slide3.webp');
+}
+
+.kognanan-norm-text {
+    font-size: 16px;
+}
+
+.service-bg-intrants {
+    background-image: url('assets/Productiondintrantsbiologiques.jpg');
+}
+.service-bg-fine-saveur {
+    background-image: url('assets/Productiondecacaofinesaveur.jpg');
+}
+.service-bg-bancarisation {
+    background-image: url('assets/bancarisation.jpg');
+}
+.service-bg-genre {
+    background-image: url('assets/Promotiondugenre.jpg');
+}
+.service-bg-agroforesterie {
+    background-image: url('assets/Agroforesterie.jpg');
+}
+
+.post-meta-dot {
+    font-size: 5px;
+}
