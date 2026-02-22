@@ -1,0 +1,110 @@
+/* Realisations Page Styles */
+
+.realisations-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/Nosrealisations1.webp') center/cover;
+    padding: 100px 0 60px;
+    color: white;
+    text-align: center;
+}
+
+.realisations-header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.realisations-header p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.realisations-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.realisation-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: block;
+    text-decoration: none;
+    color: var(--agrica-dark);
+}
+
+.realisation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.realisation-image {
+    position: relative;
+    height: 250px;
+}
+
+.realisation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.realisation-accent {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--agrica-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    z-index: 2;
+}
+
+.realisation-info {
+    padding: 30px 25px 25px;
+}
+
+.realisation-category {
+    display: block;
+    color: var(--agrica-primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.realisation-name {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+@media (max-width: 768px) {
+    .realisations-header {
+        padding: 80px 0 40px;
+    }
+
+    .realisations-header h1 {
+        font-size: 2rem;
+    }
+
+    .realisations-grid {
+        grid-template-columns: 1fr;
+    }
+}
