@@ -1,0 +1,44 @@
+/* Intrants Biologiques Page Specific Styles */
+
+.service-content-img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.eos-badge {
+    background-color: #ffeb3b;
+    color: #000;
+    padding: 0 4px;
+}
+
+.testimonial-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--agrica-green);
+}
+
+.testimonial-content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-role {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+.testimonial-text {
+    font-style: italic;
+}
