@@ -1462,14 +1462,11 @@ h6 {
     max-width: 100%;
     max-height: 80px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.7;
     transition: all 0.3s ease;
 }
 
 .partner-card:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
+    transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -2491,8 +2488,9 @@ h6 {
 }
 
 .partners-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     padding: 40px 0 80px;
 }
@@ -2507,6 +2505,8 @@ h6 {
     justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 160px;
+    width: 250px;
+    /* Base width for cards in grid/flex */
 }
 
 .partner-card:hover {
@@ -2518,14 +2518,11 @@ h6 {
     max-width: 100%;
     max-height: 80px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.7;
     transition: all 0.3s ease;
 }
 
 .partner-card:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
+    transform: scale(1.05);
 }
 
 .category-title {
@@ -2771,13 +2768,15 @@ h6 {
 }
 
 .slide-bg-1 {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/Slide2.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/Slide2.webp');
 }
+
 .slide-bg-2 {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/Slide1.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/Slide1.webp');
 }
+
 .slide-bg-3 {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/Slide3.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/Slide3.webp');
 }
 
 .kognanan-norm-text {
@@ -2787,15 +2786,19 @@ h6 {
 .service-bg-intrants {
     background-image: url('assets/Productiondintrantsbiologiques.jpg');
 }
+
 .service-bg-fine-saveur {
     background-image: url('assets/Productiondecacaofinesaveur.jpg');
 }
+
 .service-bg-bancarisation {
     background-image: url('assets/bancarisation.jpg');
 }
+
 .service-bg-genre {
     background-image: url('assets/Promotiondugenre.jpg');
 }
+
 .service-bg-agroforesterie {
     background-image: url('assets/Agroforesterie.jpg');
 }
