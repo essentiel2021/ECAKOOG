@@ -6,9 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mainHeader) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                mainHeader.classList.add('scrolled');
+                // Prevent layout jump
+                if (!mainHeader.classList.contains('scrolled')) {
+                    document.body.style.paddingTop = mainHeader.offsetHeight + 'px';
+                    mainHeader.classList.add('scrolled');
+                }
             } else {
-                mainHeader.classList.remove('scrolled');
+                if (mainHeader.classList.contains('scrolled')) {
+                    document.body.style.paddingTop = '0px';
+                    mainHeader.classList.remove('scrolled');
+                }
             }
         });
     }
