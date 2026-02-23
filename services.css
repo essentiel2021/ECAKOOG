@@ -1,0 +1,207 @@
+/* Services Page Specific Styles */
+
+.services-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/Slide1.webp') center/cover no-repeat;
+    padding: 100px 0;
+    color: var(--agrica-white);
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.services-hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(36px, 6vw, 56px);
+    margin-bottom: 20px;
+}
+
+.services-hero p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.service-group {
+    margin-bottom: 80px;
+}
+
+.group-title {
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    color: var(--agrica-dark);
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--agrica-green);
+    display: inline-block;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 60px auto;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+/* Service Card Styles (Reusing mosaic logic but adapted) */
+.service-card {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 450px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+    transition: opacity 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    color: var(--agrica-white);
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--agrica-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--agrica-white);
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: rotate(360deg) scale(1.1);
+    background: var(--agrica-or);
+}
+
+.service-card h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.service-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.service-card:hover p {
+    opacity: 0.9;
+    transform: translateY(0);
+}
+
+.service-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--agrica-or);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.service-btn i {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-btn i {
+    transform: translateX(5px);
+}
+
+/* Backgrounds */
+.bg-achat {
+    background-image: url('assets/achat-collecte/achat-collecte-1.jpg');
+}
+
+.bg-export {
+    background-image: url('assets/Slide1.webp');
+}
+
+.bg-intrants {
+    background-image: url('assets/Productiondintrantsbiologiques.jpg');
+}
+
+.bg-fine {
+    background-image: url('assets/Productiondecacaofinesaveur.jpg');
+}
+
+.bg-banc {
+    background-image: url('assets/bancarisation.jpg');
+}
+
+.bg-genre {
+    background-image: url('assets/Promotiondugenre.jpg');
+}
+
+.bg-agro {
+    background-image: url('assets/Agroforesterie.jpg');
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 60px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        height: 350px;
+    }
+
+    .service-card p {
+        opacity: 1;
+        transform: none;
+    }
+}
