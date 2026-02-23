@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Agrica JS Initialized');
 
+    // Sticky Header Logic
+    const mainHeader = document.querySelector('.main-header');
+    if (mainHeader) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                mainHeader.classList.add('scrolled');
+            } else {
+                mainHeader.classList.remove('scrolled');
+            }
+        });
+    }
+
     // Scroll Reveal Logic
     const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     console.log('Reveal elements found:', revealElements.length);
