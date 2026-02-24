@@ -1929,11 +1929,7 @@ h6 {
     align-items: start;
 }
 
-/* Sidebar */
 .service-sidebar {
-    background-color: var(--agrica-light-bg);
-    padding: 30px;
-    border-radius: 8px;
     position: sticky;
     top: 120px;
 }
