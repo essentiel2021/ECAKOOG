@@ -50,6 +50,8 @@
 .realisation-image {
     position: relative;
     height: 250px;
+    width: 100%;
+    aspect-ratio: auto;
 }
 
 .realisation-image img {
