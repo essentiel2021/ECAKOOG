@@ -256,36 +256,6 @@
     object-fit: cover;
 }
 
-/* --- ACTU STYLE MENU SIDEBAR --- */
-.d-flex {
-    display: flex;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.actu-style-menu a {
-    background-color: var(--agrica-white);
-    color: var(--agrica-text);
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 5px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.actu-style-menu a:hover,
-.actu-style-menu a.active {
-    background-color: var(--agrica-green);
-    color: var(--agrica-white);
-}
-
-.actu-style-menu a:hover .menu-meta,
-.actu-style-menu a.active .menu-meta {
-    color: var(--agrica-white);
-}
-
 /* --- RESPONSIVENESS --- */
 @media (max-width: 992px) {
     .actu-detail-grid {
