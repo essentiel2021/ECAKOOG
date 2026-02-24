@@ -163,4 +163,42 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.dropdown-toggle').forEach(dt => dt.classList.remove('active'));
         }
     });
+    // Image Lightbox Logic
+    const lightboxModal = document.getElementById('imageLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const clickableImages = document.querySelectorAll('.clickable-img');
+
+    if (lightboxModal && lightboxImg && clickableImages) {
+        clickableImages.forEach(img => {
+            img.addEventListener('click', function () {
+                lightboxModal.style.display = 'flex';
+                // Small timeout to allow display: flex to apply before opacity transition starts
+                setTimeout(() => {
+                    lightboxModal.classList.add('show');
+                }, 10);
+                lightboxImg.src = this.src;
+            });
+        });
+
+        const closeLightbox = () => {
+            lightboxModal.classList.remove('show');
+            setTimeout(() => {
+                lightboxModal.style.display = 'none';
+            }, 300); // Wait for transition to finish
+        };
+
+        // Close on X click
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', closeLightbox);
+        }
+
+        // Close on background click
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                closeLightbox();
+            }
+        });
+    }
+
 });
