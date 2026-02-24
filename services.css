@@ -160,6 +160,10 @@
     background-image: url('assets/Slide1.webp');
 }
 
+.bg-transfo {
+    background-image: url('assets/transformation/CacaoDecortique.jpg');
+}
+
 .bg-intrants {
     background-image: url('assets/Productiondintrantsbiologiques.jpg');
 }
