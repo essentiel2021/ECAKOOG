@@ -42,16 +42,21 @@
     gap: 40px;
     margin: 60px auto;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
 /* Service Card Styles (Reusing mosaic logic but adapted) */
+.service-card-wrapper {
+    flex: 1 1 320px;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+}
+
 .service-card {
     position: relative;
     height: 400px;
     width: 100%;
-    min-width: 300px;
-    max-width: 450px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
