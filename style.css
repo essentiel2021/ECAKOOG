@@ -433,13 +433,13 @@ h6 {
 
 .btn-slider {
     display: inline-block;
-    padding: 16px 40px;
+    padding: 18px 48px;
     background-color: var(--agrica-green);
     color: var(--agrica-white);
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     font-weight: 800;
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 1px;
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -566,7 +566,8 @@ h6 {
     .btn-slider {
         width: 100%;
         max-width: 280px;
-        padding: 14px 30px;
+        padding: 16px 36px;
+        font-size: 16px;
     }
 }
 
