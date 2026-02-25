@@ -388,7 +388,7 @@ h6 {
 
 .slide-title {
     font-family: 'Merriweather', serif;
-    font-size: clamp(40px, 6vw, 70px);
+    font-size: clamp(30px, 4.5vw, 55px);
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 25px;
@@ -519,7 +519,7 @@ h6 {
 
 @media (max-width: 1200px) {
     .slide-title {
-        font-size: 50px;
+        font-size: 40px;
     }
 }
 
@@ -529,7 +529,7 @@ h6 {
     }
 
     .slide-title {
-        font-size: 45px;
+        font-size: 35px;
     }
 
     .slide-desc {
@@ -578,7 +578,7 @@ h6 {
     }
 
     .slide-title {
-        font-size: 32px;
+        font-size: 26px;
     }
 
     .slide-subtitle {
