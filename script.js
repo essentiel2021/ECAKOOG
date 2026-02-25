@@ -218,6 +218,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Kognagnan Cacao Image Alignment Context
     const alignKognagnanImageToMenu = () => {
+        // Only apply this logic to the Kognagnan Cacao pages
+        const kognagnanPages = [
+            'intrants-biologiques.html',
+            'cacao-fine-saveur.html',
+            'bancarisation-assurance.html',
+            'promotion-genre.html',
+            'agroforesterie.html'
+        ];
+
+        const isKognagnan = kognagnanPages.some(page => window.location.pathname.includes(page));
+        if (!isKognagnan) return;
+
         const sidebarMenu = document.querySelector('.service-sidebar .sidebar-menu');
         const imgContainer = document.querySelector('.service-hero-img');
 
