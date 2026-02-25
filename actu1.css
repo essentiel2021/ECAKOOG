@@ -130,7 +130,8 @@
     transition: color 0.3s;
 }
 
-.recent-title:hover {
+.recent-title:hover,
+.recent-title.active {
     color: var(--agrica-green);
 }
 
