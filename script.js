@@ -216,9 +216,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Kognagnan Cacao Image Alignment Context
+    const alignKognagnanImageToMenu = () => {
+        const sidebarMenu = document.querySelector('.service-sidebar .sidebar-menu');
+        const imgContainer = document.querySelector('.service-hero-img');
+
+        // Ensure we are only targeting pages with both the menu and the hero image
+        if (sidebarMenu && imgContainer) {
+            // Check if it's one of the kognagnan pages or general service page with a menu
+            if (window.innerWidth > 992) {
+                // Match the main image height to the sidebar menu height
+                imgContainer.style.height = sidebarMenu.offsetHeight + 'px';
+            } else {
+                imgContainer.style.height = 'auto'; // Reset for mobile
+            }
+        }
+    };
+
     // Run immediately and on resize/load
     alignImageToSidebar();
-    window.addEventListener('load', alignImageToSidebar);
-    window.addEventListener('resize', alignImageToSidebar);
+    alignKognagnanImageToMenu();
+    window.addEventListener('load', () => {
+        alignImageToSidebar();
+        alignKognagnanImageToMenu();
+    });
+    window.addEventListener('resize', () => {
+        alignImageToSidebar();
+        alignKognagnanImageToMenu();
+    });
 
 });
