@@ -314,3 +314,63 @@
         grid-template-columns: 1fr;
     }
 }
+/* --- Widget Styles (from generic service) --- */
+.realisation-widget {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/service-widget-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 30px;
+    text-align: center;
+    color: var(--agrica-white);
+    border-radius: 8px;
+}
+
+/* Fallback if image missing */
+.realisation-widget {
+    background-color: var(--agrica-dark);
+}
+
+.realisation-widget h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--agrica-white);
+}
+
+.realisation-widget p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.realisation-widget-phone {
+    font-size: 24px;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--agrica-or);
+}
+
+.realisation-widget-email {
+    font-size: 16px;
+    color: var(--agrica-white);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.btn-realisation-widget {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--agrica-or);
+    color: var(--agrica-dark);
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-realisation-widget:hover {
+    background-color: var(--agrica-white);
+    transform: translateY(-3px);
+}
