@@ -18,6 +18,8 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    position: sticky;
+    top: 120px;
 }
 
 /* Search Widget */
