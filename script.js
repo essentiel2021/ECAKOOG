@@ -203,6 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Realisation Image Alignment
     const alignImageToSidebar = () => {
+        // Only apply this logic to the realisation pages
+        if (!window.location.pathname.includes('realisation-')) return;
+
         const sidebar = document.querySelector('.widget-recent');
         const imgContainer = document.querySelector('.actu-main-img');
 
