@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Realisation Image Alignment
     const alignImageToSidebar = () => {
-        const sidebar = document.querySelector('.actu-sidebar');
+        const sidebar = document.querySelector('.widget-recent');
         const imgContainer = document.querySelector('.actu-main-img');
 
         if (sidebar && imgContainer) {
