@@ -204,3 +204,57 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Specific Kognagnan Sub-pages Styles --- */
+
+.service-content-img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+/* Testimonials */
+.testimonial-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--agrica-green);
+}
+
+.testimonial-content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-role {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+.testimonial-text {
+    font-style: italic;
+}
+
+/* Specific Lists and Badges */
+.value-creation-list,
+.programs-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.eos-badge {
+    background-color: #ffeb3b;
+    color: #000;
+    padding: 0 4px;
+}
