@@ -201,24 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Realisation Image Alignment
-    const alignImageToSidebar = () => {
-        // Only apply this logic to the realisation pages
-        if (!window.location.pathname.includes('realisation-')) return;
-
-        const sidebar = document.querySelector('.widget-recent');
-        const imgContainer = document.querySelector('.actu-main-img');
-
-        if (sidebar && imgContainer) {
-            if (window.innerWidth > 992) {
-                // Match the main image height to the sidebar height
-                imgContainer.style.height = sidebar.offsetHeight + 'px';
-            } else {
-                imgContainer.style.height = 'auto'; // Reset for mobile
-            }
-        }
-    };
-
     // Kognagnan Cacao Image Alignment Context
     const alignKognagnanImageToMenu = () => {
         // Only apply this logic to the Kognagnan Cacao pages
@@ -249,14 +231,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Run immediately and on resize/load
-    alignImageToSidebar();
     alignKognagnanImageToMenu();
     window.addEventListener('load', () => {
-        alignImageToSidebar();
         alignKognagnanImageToMenu();
     });
     window.addEventListener('resize', () => {
-        alignImageToSidebar();
         alignKognagnanImageToMenu();
     });
 
