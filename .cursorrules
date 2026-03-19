@@ -1,0 +1,36 @@
+# Rules for ECAKOOG Project
+
+This project uses a strict, Vanilla HTML/CSS/JS architecture without heavy frameworks like React or Vue. 
+When making modifications or adding new features, the AI must STRICTLY abide by the following guidelines:
+
+## 1. Domain-Driven CSS Architecture
+- **Global Styles**: Global variables, fonts, colors, header, footer, generic buttons and structural containers should be placed EXCLUSIVELY in `style.css`.
+- **Domain Styles**: Dedicated layouts must have their own separated CSS files.
+  - The "Services" pages (`achat-collecte.html`, `exportation.html`, `transformation.html`) use `service.css`.
+  - The "Kognagnan" pages (`agroforesterie.html`, etc.) use `kognagnan.css`.
+  - The "Réalisations" pages (`realisation-chateaux-eau.html`, etc.) use `realisation.css`.
+  - The "Actualités" pages use `actu1.css`.
+- **No Duplication**: If multiple pages share the same specific layout, abstract it to a shared domain CSS (e.g. `kognagnan.css`), do not duplicate CSS into multiple files.
+
+## 2. BEM-like Class Naming Convention
+- To prevent conflicts, always prefix layout-specific classes with their domain name.
+  - Examples: `.kognagnan-sidebar`, `.realisation-detail-grid`, `.btn-realisation-widget`.
+  - NEVER use generic class names like `.sidebar`, `.main-content`, or `.widget` outside of global scopes.
+
+## 3. Semantic HTML Structure
+- Prioritize semantic structural tags.
+- `<header>` and `<nav>` for top-level navigation.
+- `<main>` for the page's core content.
+- `<section>` to distinguish logical blocks of a page.
+- `<article>` for individual posts or portfolio items.
+- `<aside>` for sidebars and widgets.
+
+## 4. Media & Asset Management
+- Always use the **`.webp`** image format for photographs to ensure fast loading times.
+- Organize assets tightly in domain subfolders (e.g. `assets/actus/`, `assets/cacao-fine-saveur/`).
+- Always include `loading="lazy"` on image tags that are below the initial viewport.
+
+## 5. Vanilla JavaScript Rules
+- No external libraries (no jQuery). Keep JavaScript pure vanilla.
+- Scope scripts out into dedicated files when they only affect certain pages (e.g., `actualites.js`).
+- Use `document.querySelector` and `addEventListener` exclusively. Avoid inline HTML attributes like `onclick=""`. 
