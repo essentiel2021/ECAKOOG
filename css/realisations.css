@@ -1,7 +1,7 @@
 /* Realisations Page Styles */
 
 .realisations-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/Nosrealisations1.webp') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/Nosrealisations1.webp') center/cover;
     padding: 100px 0 60px;
     color: white;
     text-align: center;

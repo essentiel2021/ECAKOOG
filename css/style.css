@@ -1287,7 +1287,7 @@ h6 {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('assets/Actu1.webp');
+    background-image: url('../assets/Actu1.webp');
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -2595,15 +2595,15 @@ h6 {
 
 
 .slide-bg-1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/slides/Slide 1.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/slides/Slide 1.webp');
 }
 
 .slide-bg-2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/slides/Slide 2.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/slides/Slide 2.webp');
 }
 
 .slide-bg-3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/slides/Slide 3.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/slides/Slide 3.webp');
 }
 
 .kognanan-norm-text {
@@ -2611,23 +2611,23 @@ h6 {
 }
 
 .service-bg-intrants {
-    background-image: url('assets/Productiondintrantsbiologiques.jpg');
+    background-image: url('../assets/Productiondintrantsbiologiques.jpg');
 }
 
 .service-bg-fine-saveur {
-    background-image: url('assets/Productiondecacaofinesaveur.jpg');
+    background-image: url('../assets/Productiondecacaofinesaveur.jpg');
 }
 
 .service-bg-bancarisation {
-    background-image: url('assets/bancarisation.jpg');
+    background-image: url('../assets/bancarisation.jpg');
 }
 
 .service-bg-genre {
-    background-image: url('assets/Promotiondugenre.jpg');
+    background-image: url('../assets/Promotiondugenre.jpg');
 }
 
 .service-bg-agroforesterie {
-    background-image: url('assets/Agroforesterie.jpg');
+    background-image: url('../assets/Agroforesterie.jpg');
 }
 
 .post-meta-dot {

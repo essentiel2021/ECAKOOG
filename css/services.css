@@ -1,7 +1,7 @@
 /* Services Page Specific Styles */
 
 .services-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/Slide1.webp') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/Slide1.webp') center/cover no-repeat;
     padding: 100px 0;
     color: var(--agrica-white);
     text-align: center;
@@ -158,35 +158,35 @@
 
 /* Backgrounds */
 .bg-achat {
-    background-image: url('assets/achat-collecte/achat-collecte-1.jpg');
+    background-image: url('../assets/achat-collecte/achat-collecte-1.jpg');
 }
 
 .bg-export {
-    background-image: url('assets/Slide1.webp');
+    background-image: url('../assets/Slide1.webp');
 }
 
 .bg-transfo {
-    background-image: url('assets/transformation/CacaoDecortique.jpg');
+    background-image: url('../assets/transformation/CacaoDecortique.jpg');
 }
 
 .bg-intrants {
-    background-image: url('assets/Productiondintrantsbiologiques.jpg');
+    background-image: url('../assets/Productiondintrantsbiologiques.jpg');
 }
 
 .bg-fine {
-    background-image: url('assets/Productiondecacaofinesaveur.jpg');
+    background-image: url('../assets/Productiondecacaofinesaveur.jpg');
 }
 
 .bg-banc {
-    background-image: url('assets/bancarisation.jpg');
+    background-image: url('../assets/bancarisation.jpg');
 }
 
 .bg-genre {
-    background-image: url('assets/Promotiondugenre.jpg');
+    background-image: url('../assets/Promotiondugenre.jpg');
 }
 
 .bg-agro {
-    background-image: url('assets/Agroforesterie.jpg');
+    background-image: url('../assets/Agroforesterie.jpg');
 }
 
 /* Responsive */

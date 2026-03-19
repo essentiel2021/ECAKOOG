@@ -2,7 +2,7 @@
 
 /* Hero Section */
 .kognagnan-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('assets/Engagements2.webp') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../assets/Engagements2.webp') center/cover no-repeat;
     padding: 120px 0 100px;
     color: var(--agrica-white);
     text-align: center;
