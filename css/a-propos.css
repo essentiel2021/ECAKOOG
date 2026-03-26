@@ -28,12 +28,91 @@
 }
 
 .timeline-intro-text {
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    text-align: center;
-    font-size: 16px;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    text-align: justify;
+    font-size: 1.05rem;
     line-height: 1.8;
-    color: var(--agrica-text);
+    color: #444;
+}
+
+.timeline-intro-text ul {
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.timeline-intro-text h3 {
+    color: var(--agrica-green);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.timeline-intro-text .mt-40 {
+    margin-top: 40px;
+}
+
+.info-box {
+    background: #f8faf9;
+    padding: 25px;
+    border-left: 4px solid var(--agrica-or);
+    margin: 30px 0;
+}
+
+.info-box p {
+    margin-bottom: 10px;
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+.volume-box {
+    background: var(--agrica-dark);
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.volume-box h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.volume-box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+.volume-box li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.volume-box li:last-child {
+    border-bottom: none;
+}
+
+.volume-box li strong {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.volume-box .highlight {
+    color: var(--agrica-green);
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .timeline-intro-text p {
@@ -42,6 +121,100 @@
 
 .timeline-intro-text strong {
     color: var(--agrica-green);
+}
+
+.pillars-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pillar-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    background: #fdfdfb;
+    border-left: 4px solid var(--agrica-green);
+    border-radius: 0 10px 10px 0;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    border-left-width: 4px;
+}
+
+.pillar-item:hover {
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transform: translateX(8px);
+    border-color: #eee;
+    border-left-color: var(--agrica-or);
+}
+
+.pillar-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(144, 76, 21, 0.08);
+    color: var(--agrica-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.pillar-item:hover .pillar-icon {
+    background: var(--agrica-green);
+    color: white;
+}
+
+.pillar-text {
+    font-size: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.succursales-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.succursale-card {
+    background: #fdfdfb;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.succursale-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    background: #fff;
+    border-color: var(--agrica-green);
+    transform: translateY(-5px);
+}
+
+.succursale-card .city {
+    font-weight: 700;
+    color: var(--agrica-green);
+    font-size: 1rem;
+}
+
+.succursale-card .data {
+    font-size: 0.85rem;
+    color: #444;
 }
 
 .timeline-main-img {
@@ -62,6 +235,282 @@
 
 .org-text {
     margin-bottom: 20px;
+}
+
+.white-diagram-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+/* --- Graphique d'Évolution (CSS Chart) --- */
+.chart-wrapper {
+    position: relative;
+    padding-left: 60px; /* Espace pour l'axe Y */
+    padding-bottom: 40px; /* Espace pour l'axe X */
+    margin-top: 50px;
+}
+
+.y-axis-label {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--agrica-green);
+    white-space: nowrap;
+}
+
+.x-axis-label {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--agrica-green);
+}
+
+.evolution-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 350px;
+    padding: 0 10px;
+    gap: 15px;
+    position: relative;
+    border-bottom: 2px solid #333; /* Axe X */
+    border-left: 2px solid #333;   /* Axe Y */
+    overflow: visible;
+}
+
+/* Grille horizontale */
+.chart-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.grid-value {
+    position: absolute;
+    left: -55px;
+    top: -8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #888;
+    width: 45px;
+    text-align: right;
+}
+
+.chart-bar-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    justify-content: flex-end;
+    z-index: 1;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.bar-total {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--agrica-green);
+    margin-bottom: 6px;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* Tooltip au survol */
+.bar-tooltip {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -110%);
+    background: rgba(26, 51, 36, 0.97);
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 14px;
+    min-width: 150px;
+    text-align: left;
+    z-index: 200;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    font-size: 0.8rem;
+    line-height: 1.8;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.bar-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(26, 51, 36, 0.97);
+}
+
+.bar-tooltip-row {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.78rem;
+}
+
+.bar-tooltip-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.bar-tooltip-row.total {
+    font-weight: 700;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 5px;
+    margin-bottom: 3px;
+}
+
+.chart-bar-group:hover .bar-tooltip {
+    display: block;
+}
+
+.chart-bar-group:hover {
+    z-index: 100;
+}
+
+.chart-bar-group:hover .bar-container {
+    filter: brightness(1.08);
+    transform: scaleX(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Couleurs des points de légende dans le tooltip */
+.bar-tooltip-dot.men  { background-color: var(--agrica-green); }
+.bar-tooltip-dot.women { background-color: var(--agrica-or); }
+
+/* Marge bas de paragraphe (section commercialisation) */
+.p-mb-lg { margin-bottom: 30px; }
+
+.chart-bar-group:hover .bar-total {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bar-container {
+    width: 60%;
+    max-width: 50px;
+    background: #f5f5f5;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    height: 0;
+    transition: height 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Segments */
+.bar-segment {
+    width: 100%;
+    transition: opacity 0.3s;
+}
+
+.bar-segment.men {
+    background-color: var(--agrica-green);
+}
+
+.bar-segment.women {
+    background-color: var(--agrica-or);
+}
+
+.bar-container:hover .bar-segment {
+    filter: brightness(1.1);
+}
+
+.bar-label {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #666;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Légende du graphique */
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.legend-color.men {
+    background-color: var(--agrica-green);
+}
+
+.legend-color.women {
+    background-color: var(--agrica-or);
+}
+
+/* Media Queries pour le graphique */
+@media (max-width: 768px) {
+    .evolution-chart {
+        height: 250px;
+        gap: 8px;
+    }
+    .bar-total {
+        font-size: 0.7rem;
+        opacity: 1;
+        transform: none;
+    }
+    .bar-label {
+        font-size: 0.7rem;
+        transform: rotate(-45deg);
+        margin-top: 20px;
+    }
+}
+
+@keyframes growUp {
+    from { height: 0; }
+    to { height: var(--final-height); }
+}
+
+.bar-container.animated {
+    animation: growUp 1.5s ease-out forwards;
 }
 
 /* 4. CHIFFRES CLES */
@@ -201,6 +650,21 @@
     display: none;
 }
 
+.cert-badge {
+    background: #f0f4f2;
+    color: var(--agrica-green);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid rgba(144, 76, 21, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
 /* Responsive Styles for A Propos Page */
 @media (max-width: 992px) {
 
@@ -222,7 +686,7 @@
     }
 
     .dark-image {
-        max-width: 500px;
+        max-width: 800px;
         margin: 0 auto;
     }
 
@@ -278,6 +742,11 @@
 
     .img-stats {
         height: 250px;
+    }
+
+    /* 2. QUI SOMMES NOUS */
+    .succursales-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     /* Adjust table text for very small screens */
