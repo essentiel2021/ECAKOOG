@@ -2184,62 +2184,38 @@ h6 {
     padding: 20px 0;
 }
 
-/* The continuous line */
-.timeline-line {
-    position: absolute;
-    bottom: 50px;
-    /* Adjust based on dot position */
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #e0e0e0;
-    z-index: 1;
-    border-radius: 2px;
-}
-
-/* The flexible track for cards */
-.timeline-track {
+/* Symmetrical Timeline Styles */
+.timeline-symmetrical {
     display: flex;
-    gap: 40px;
-    padding-bottom: 80px;
-    /* Space for the line and dots */
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    /* Hide scrollbar IE/Edge */
-    scrollbar-width: none;
-    /* Hide scrollbar Firefox */
-    padding-left: 20px;
-    /* Padding for first item */
-    padding-right: 20px;
-    /* Padding for last item */
+    flex-direction: column;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
-.timeline-track::-webkit-scrollbar {
-    display: none;
-    /* Hide scrollbar Chrome/Safari */
+/* Rows for Top and Bottom Cards (CSS Grid) */
+.timeline-top-row,
+.timeline-bottom-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
+/* Base Card Style */
 .timeline-item {
-    flex: 0 0 350px;
-    /* Fixed width for cards */
     position: relative;
-    z-index: 2;
 }
 
-/* The Card */
 .timeline-card {
     background: white;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    margin-bottom: 40px;
-    /* Space between card and dot */
     position: relative;
     transition: transform 0.3s ease;
     height: 100%;
-    /* Equal height */
     text-align: left;
+    z-index: 2;
 }
 
 .timeline-card:hover {
@@ -2260,84 +2236,113 @@ h6 {
     margin-bottom: 20px;
 }
 
-/* Icons/Logos in card */
-.timeline-card img {
-    height: 50px;
-    width: auto;
-    margin-right: 15px;
-    margin-bottom: 10px;
-    display: inline-block;
+/* Spacing and Connectors for Top Row */
+.timeline-top-row .timeline-item {
+    padding-bottom: 40px; /* Space for the Connector line */
+}
+.timeline-top-row .timeline-card::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; /* drops down below card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    background-color: #e0e0e0;
+    z-index: 1;
 }
 
-/* The Dot on the line */
+/* Spacing and Connectors for Bottom Row */
+.timeline-bottom-row .timeline-item {
+    padding-top: 40px; /* Space for the Connector line */
+}
+.timeline-bottom-row .timeline-card::before {
+    content: '';
+    position: absolute;
+    top: -40px; /* goes up above card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    background-color: #e0e0e0;
+    z-index: 1;
+}
+
+/* Central Axis Line and Dots */
+.timeline-axis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    align-items: center;
+    justify-items: center;
+    height: 40px; /* Buffer zone between rows */
+}
+
+/* The Continuous Horizontal Line */
+.timeline-line-continuous {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #e0e0e0;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 2px;
+}
+
+/* Wrapper for the dot to position it above the line */
+.timeline-node {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* The actual circle dot */
 .timeline-dot {
     width: 24px;
     height: 24px;
     background-color: var(--agrica-or);
-    /* Yellow dot */
     border: 4px solid white;
     border-radius: 50%;
     box-shadow: 0 0 0 2px var(--agrica-or);
-    /* Double ring effect */
-    position: absolute;
-    bottom: -52px;
-    /* Position on the line */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
 }
 
-/* Connector line from card to dot */
-.timeline-card::after {
-    content: '';
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    width: 2px;
-    height: 40px;
-    background-color: #e0e0e0;
-    /* Dashed or solid line connector */
-    transform: translateX(-50%);
-    z-index: -1;
-}
-
-/* Navigation Buttons (Optional) */
-.timeline-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding-right: 20px;
-}
-
-.nav-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: white;
-    border: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.nav-btn:hover {
-    background: var(--agrica-green);
-    color: white;
-    border-color: var(--agrica-green);
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .timeline-top-row,
+    .timeline-bottom-row,
+    .timeline-axis {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
-    .timeline-item {
-        flex: 0 0 280px;
-        /* Smaller cards on mobile */
+    /* Stack vertically on mobile */
+    .timeline-top-row,
+    .timeline-bottom-row,
+    .timeline-axis {
+        grid-template-columns: 1fr;
     }
-
+    
+    /* Hide the horizontal line on mobile since it stacks */
+    .timeline-axis {
+        display: none;
+    }
+    
     .timeline-card h3 {
         font-size: 20px;
     }
+    
+    .timeline-top-row .timeline-item { padding-bottom: 20px; }
+    .timeline-top-row .timeline-card::after { display: none; }
+    
+    .timeline-bottom-row .timeline-item { padding-top: 20px; }
+    .timeline-bottom-row .timeline-card::before { display: none; }
 }
 
 
