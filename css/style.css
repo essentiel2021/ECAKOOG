@@ -1996,6 +1996,8 @@ h6 {
 .split-section {
     padding: 80px 0;
     overflow: hidden;
+    background-color: #1a3324;
+    color: var(--agrica-white);
 }
 
 .split-layout {
@@ -2007,7 +2009,7 @@ h6 {
 
 .split-content .subtitle {
     display: block;
-    color: var(--agrica-green);
+    color: var(--agrica-or);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -2019,11 +2021,11 @@ h6 {
     font-size: 36px;
     line-height: 1.2;
     margin-bottom: 25px;
-    color: var(--agrica-dark);
+    color: var(--agrica-white);
 }
 
 .split-content p {
-    color: var(--agrica-text);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.6;
