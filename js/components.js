@@ -51,6 +51,21 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => console.error("Error fetching footer:", err));
 
+    // Fetch Sidebar Widget
+    fetch(`${rootPrefix}components/sidebar-widget.html`)
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load sidebar widget');
+            return response.text();
+        })
+        .then(data => {
+            let processedHTML = data.replace(/\{\{ROOT\}\}/g, rootPrefix);
+            const placeholder = document.getElementById('sidebar-widget-placeholder');
+            if (placeholder) {
+                placeholder.innerHTML = processedHTML;
+            }
+        })
+        .catch(err => console.log("Sidebar widget not found or error:", err));
+
     function setActiveLink(filename, isSub, fullPath) {
         document.querySelectorAll('.main-header a.active').forEach(a => a.classList.remove('active'));
         
