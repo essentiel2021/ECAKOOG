@@ -804,7 +804,7 @@
 
     /* 1. MOT DU PCA */
     .split-layout {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 40px;
     }
 
@@ -815,13 +815,42 @@
 
     /* 3. NOTRE ORGANISATION */
     .dark-feature-layout {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 40px;
     }
 
     .dark-image {
         max-width: 800px;
         margin: 0 auto;
+    }
+
+    /* 5. NOTRE PARCOURS (Timeline) */
+    .timeline-symmetrical {
+        padding: 0;
+    }
+    
+    .timeline-top-row,
+    .timeline-bottom-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .timeline-axis {
+        display: none;
+    }
+
+    .timeline-top-row .timeline-item {
+        padding-bottom: 0px;
+    }
+
+    .timeline-bottom-row .timeline-item {
+        padding-top: 0px;
+    }
+
+    .timeline-top-row .timeline-card::after,
+    .timeline-bottom-row .timeline-card::before {
+        content: none;
+        display: none;
     }
 
     /* 4. CHIFFRES CLES */
@@ -880,7 +909,7 @@
 
     /* 2. QUI SOMMES NOUS */
     .succursales-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     /* Adjust table text for very small screens */
