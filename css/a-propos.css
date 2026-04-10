@@ -187,7 +187,7 @@
 }
 
 .succursale-card {
-    background: #fdfdfb;
+    background: var(--agrica-gold);
     padding: 12px 15px;
     border-radius: 10px;
     border: 1px solid #eee;
@@ -201,20 +201,20 @@
 
 .succursale-card:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    background: #fff;
-    border-color: var(--agrica-green);
+    background: var(--agrica-green);
+    border-color: var(--agrica-or);
     transform: translateY(-5px);
 }
 
 .succursale-card .city {
     font-weight: 700;
-    color: var(--agrica-green);
+    color: var(--agrica-or);
     font-size: 1rem;
 }
 
 .succursale-card .data {
     font-size: 0.85rem;
-    color: #444;
+    color: var(--agrica-white);
 }
 
 .timeline-main-img {
