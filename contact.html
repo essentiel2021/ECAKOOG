@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactez-Nous - ECAKOOG</title>
+    <title data-i18n="page.title.contact">Contactez-Nous - ECAKOOG</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,9 +17,9 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1>Contactez-nous</h1>
+                <h1 data-i18n="contact.title">Contactez-nous</h1>
                 <div class="breadcrumb">
-                    <a href="index.html">Accueil</a> / <span>Contact</span>
+                    <a href="index.html" data-i18n="breadcrumb.home">Accueil</a> / <span data-i18n="contact.breadcrumb">Contact</span>
                 </div>
             </div>
         </section>
@@ -30,9 +30,9 @@
 
                     <!-- Contact Info -->
                     <div class="contact-info">
-                        <span class="subtitle">INFORMATIONS</span>
-                        <h2>Restons en Contact</h2>
-                        <p>Nous sommes à votre écoute pour toute
+                        <span class="subtitle" data-i18n="contact.subtitle">INFORMATIONS</span>
+                        <h2 data-i18n="contact.h2">Restons en Contact</h2>
+                        <p data-i18n="contact.intro">Nous sommes à votre écoute pour toute
                             question, suggestion ou demande de partenariat. N'hésitez pas à nous contacter.</p>
 
                         <div class="info-item">
@@ -40,9 +40,9 @@
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
-                                <h4>Notre Siège</h4>
-                                <p>Siège Social : Grogouya, Lakota <br> Bureau
-                                    Abidjan : Cocody Angré 8ème Tranche</p>
+                                <h4 data-i18n="contact.hq.title">Notre Siège</h4>
+                                <p><span data-i18n="contact.hq.value1">Siège Social : Grogouya, Lakota</span> <br> <span data-i18n="contact.hq.value2">Bureau
+                                    Abidjan : Cocody Angré 8ème Tranche</span></p>
                             </div>
                         </div>
 
@@ -51,7 +51,7 @@
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <h4>Téléphone</h4>
+                                <h4 data-i18n="contact.phone.title">Téléphone</h4>
                                 <p>+225 07 79 20 74 93 <br> +225 07 07 83 96 90</p>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div>
-                                <h4>Email</h4>
+                                <h4 data-i18n="contact.email.title">Email</h4>
                                 <p>info@ecakognanan.com</p>
                             </div>
                         </div>
@@ -69,19 +69,19 @@
 
                     <!-- Contact Form -->
                     <div class="contact-form-wrapper">
-                        <h3>Envoyez-nous un message</h3>
+                        <h3 data-i18n="contact.form.title">Envoyez-nous un message</h3>
                         <form action="#" method="POST">
                             <div class="form-row">
-                                <input type="text" placeholder="Nom complet">
-                                <input type="email" placeholder="Adresse Email">
+                                <input type="text" placeholder="Nom complet" data-i18n-attr="placeholder:contact.form.name">
+                                <input type="email" placeholder="Adresse Email" data-i18n-attr="placeholder:contact.form.email">
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Sujet">
+                                <input type="text" placeholder="Sujet" data-i18n-attr="placeholder:contact.form.subject">
                             </div>
                             <div class="form-group">
-                                <textarea cols="30" rows="5" placeholder="Votre message"></textarea>
+                                <textarea cols="30" rows="5" placeholder="Votre message" data-i18n-attr="placeholder:contact.form.message"></textarea>
                             </div>
-                            <button type="submit" class="btn-slider">Envoyer le
+                            <button type="submit" class="btn-slider" data-i18n="contact.form.submit">Envoyer le
                                 message</button>
                         </form>
                     </div>
@@ -102,6 +102,7 @@
 
         <div id="footer-placeholder"></div>
 
+    <script src="js/i18n.js?v=1.0"></script>
     <script src="js/components.js?v=1.0"></script>
         <script src="js/script.js"></script>
 </body>

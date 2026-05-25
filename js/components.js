@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 placeholder.innerHTML = processedHTML;
                 setActiveLink(currentHtmlFile, isSubfolder, pathName);
                 initHeaderEvents();
+                if (window.I18N) window.I18N.ready.then(() => window.I18N.apply(placeholder));
             }
         })
         .catch(err => console.error("Error fetching header:", err));
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const placeholder = document.getElementById('footer-placeholder');
             if (placeholder) {
                 placeholder.innerHTML = processedHTML;
+                if (window.I18N) window.I18N.ready.then(() => window.I18N.apply(placeholder));
             }
         })
         .catch(err => console.error("Error fetching footer:", err));
@@ -62,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const placeholder = document.getElementById('sidebar-widget-placeholder');
             if (placeholder) {
                 placeholder.innerHTML = processedHTML;
+                if (window.I18N) window.I18N.ready.then(() => window.I18N.apply(placeholder));
             }
         })
         .catch(err => console.log("Sidebar widget not found or error:", err));

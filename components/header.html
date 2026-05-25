@@ -3,7 +3,7 @@
             <div class="top-bar">
                 <div class="container">
                     <div class="top-bar-left">
-                        <span><i class="fa-solid fa-location-dot"></i>Grogouya, 15 Km de Lakota (Côte d’Ivoire)</span>
+                        <span><i class="fa-solid fa-location-dot"></i><span data-i18n="topbar.address">Grogouya, 15 Km de Lakota (Côte d’Ivoire)</span></span>
                         <span><i class="fa-solid fa-phone"></i> (+225) 07 07 83 96 90</span>
                     </div>
                     <div class="top-bar-right">
@@ -11,6 +11,11 @@
                                 class="fa-brands fa-facebook-f"></i></a>
                         <a href="https://www.linkedin.com/company/ecakoog-coop-ca/" target="_blank"><i
                                 class="fa-brands fa-linkedin-in"></i></a>
+                        <div class="lang-switcher">
+                            <button type="button" class="lang-btn" data-lang="fr">FR</button>
+                            <span class="lang-sep">|</span>
+                            <button type="button" class="lang-btn" data-lang="en">EN</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -28,45 +33,45 @@
 
                     <div class="nav-menu">
                         <ul>
-                            <li><a href="{{ROOT}}index.html" class="active">Accueil</a></li>
+                            <li><a href="{{ROOT}}index.html" class="active" data-i18n="nav.home">Accueil</a></li>
                             <li class="dropdown-toggle">
-                                <a href="{{ROOT}}a-propos.html" class="dropdown-link ">A Propos <i
+                                <a href="{{ROOT}}a-propos.html" class="dropdown-link "><span data-i18n="nav.about">A Propos</span> <i
                                         class="fa-solid fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ROOT}}a-propos.html#mot-pca">Mot du PCA</a></li>
-                                    <li><a href="{{ROOT}}a-propos.html#qui-sommes-nous">Qui sommes nous</a></li>
-                                    <li><a href="{{ROOT}}a-propos.html#notre-organisation">Notre organisation</a></li>
-                                    <li><a href="{{ROOT}}a-propos.html#chiffres-cles">Les chiffres clés</a></li>
-                                    <li><a href="{{ROOT}}a-propos.html#nos-certificats">Nos certificats</a></li>
+                                    <li><a href="{{ROOT}}a-propos.html#mot-pca" data-i18n="nav.about.pca">Mot du PCA</a></li>
+                                    <li><a href="{{ROOT}}a-propos.html#qui-sommes-nous" data-i18n="nav.about.who">Qui sommes nous</a></li>
+                                    <li><a href="{{ROOT}}a-propos.html#notre-organisation" data-i18n="nav.about.org">Notre organisation</a></li>
+                                    <li><a href="{{ROOT}}a-propos.html#chiffres-cles" data-i18n="nav.about.figures">Les chiffres clés</a></li>
+                                    <li><a href="{{ROOT}}a-propos.html#nos-certificats" data-i18n="nav.about.certs">Nos certificats</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-toggle">
-                                <a href="{{ROOT}}services/index.html" class="dropdown-link ">Nos Services <i
+                                <a href="{{ROOT}}services/index.html" class="dropdown-link "><span data-i18n="nav.services">Nos Services</span> <i
                                         class="fa-solid fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ROOT}}services/achat-collecte.html">Achat, collecte et Conditionnement</a>
+                                    <li><a href="{{ROOT}}services/achat-collecte.html" data-i18n="nav.services.collect">Achat, collecte et Conditionnement</a>
                                     </li>
-                                    <li><a href="{{ROOT}}services/exportation.html">Exportation</a></li>
-                                    <li><a href="{{ROOT}}services/transformation.html">Transformation</a></li>
+                                    <li><a href="{{ROOT}}services/exportation.html" data-i18n="nav.services.export">Exportation</a></li>
+                                    <li><a href="{{ROOT}}services/transformation.html" data-i18n="nav.services.transform">Transformation</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown-toggle">
-                                <a href="{{ROOT}}kognagnan-cacao/index.html" class="dropdown-link ">KOOGNAGNAN CACAO <i
+                                <a href="{{ROOT}}kognagnan-cacao/index.html" class="dropdown-link "><span data-i18n="nav.kognagnan">KOOGNAGNAN CACAO</span> <i
                                         class="fa-solid fa-chevron-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{ROOT}}kognagnan-cacao/intrants-biologiques.html">Production d'intrants biologiques</a></li>
-                                    <li><a href="{{ROOT}}kognagnan-cacao/cacao-fine-saveur.html">Production de cacao fine saveur</a></li>
-                                    <li><a href="{{ROOT}}kognagnan-cacao/bancarisation-assurance.html">Bancarisation & assurance maladie</a>
+                                    <li><a href="{{ROOT}}kognagnan-cacao/intrants-biologiques.html" data-i18n="nav.kognagnan.intrants">Production d'intrants biologiques</a></li>
+                                    <li><a href="{{ROOT}}kognagnan-cacao/cacao-fine-saveur.html" data-i18n="nav.kognagnan.finesaveur">Production de cacao fine saveur</a></li>
+                                    <li><a href="{{ROOT}}kognagnan-cacao/bancarisation-assurance.html" data-i18n="nav.kognagnan.bancarisation">Bancarisation & assurance maladie</a>
                                     </li>
-                                    <li><a href="{{ROOT}}kognagnan-cacao/promotion-genre.html">Promotion du genre & lutte contre le travail des
+                                    <li><a href="{{ROOT}}kognagnan-cacao/promotion-genre.html" data-i18n="nav.kognagnan.genre">Promotion du genre & lutte contre le travail des
                                             enfants</a></li>
-                                    <li><a href="{{ROOT}}kognagnan-cacao/agroforesterie.html">Agroforesterie</a></li>
+                                    <li><a href="{{ROOT}}kognagnan-cacao/agroforesterie.html" data-i18n="nav.kognagnan.agroforesterie">Agroforesterie</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ROOT}}realisations/index.html">Nos Réalisations</a></li>
-                            <li><a href="{{ROOT}}actualites/index.html">Actualités</a></li>
-                            <li><a href="{{ROOT}}contact.html">Contact</a></li>
-                            <li><a href="{{ROOT}}partenaires.html">Partenaires</a></li>
+                            <li><a href="{{ROOT}}realisations/index.html" data-i18n="nav.realisations">Nos Réalisations</a></li>
+                            <li><a href="{{ROOT}}actualites/index.html" data-i18n="nav.actualites">Actualités</a></li>
+                            <li><a href="{{ROOT}}contact.html" data-i18n="nav.contact">Contact</a></li>
+                            <li><a href="{{ROOT}}partenaires.html" data-i18n="nav.partenaires">Partenaires</a></li>
                         </ul>
                     </div>
 
