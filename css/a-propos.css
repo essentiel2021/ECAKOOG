@@ -163,7 +163,7 @@
 .pillar-icon {
     width: 45px;
     height: 45px;
-    background: var(--agrica-or);
+    background: white;
     color: var(--agrica-green);
     display: flex;
     align-items: center;
